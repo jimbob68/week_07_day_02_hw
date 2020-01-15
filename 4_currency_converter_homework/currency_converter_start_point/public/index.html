@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/bundle.js"></script>
+
+  <header>
+    <h1>Currencies</h1>
+    <h2>Amount: {{ convertedTo }} </h2>
+    <p>Total should update when you add a new amount.</p>
+  </header>
+
+</head>
+<body>
+
+  <div id="app">
+  <H1>Currency Converter</H1>
+  </div>
+  <label for="currency_select">Select a Currency:</label>
+    <!-- <select id="currency_select" v-model="selectedCurrency"> -->
+      <ul>
+        <li  v-for="currency in currencies">{{ Currency }}</li>
+      </ul>
+
+    <form>
+      <label for="new-amount">Try another amount</label>
+      <input  id="new-amount" type="text" v-model="newAmount">
+      <input type="submit" value="Save New Amount">
+    </form>
+
+
+    <!-- </select> -->
+
+
+</body>
+</html>
